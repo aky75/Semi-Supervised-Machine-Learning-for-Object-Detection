@@ -1,0 +1,8 @@
+classes= 1
+predict=data/pseudo/train_set_50v.txt
+train=data/pseudo/pseudo_train_rest.txt
+valid=data/valid.txt
+test=data/test.txt
+names=data/kitti1.names
+backup=backup/
+eval=coco

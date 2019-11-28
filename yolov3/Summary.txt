@@ -1,0 +1,20 @@
+Generated prediction on kitti dataset using pretrained yolov3 weights
+
+
+Trained model on total dataset (train-val-test::50-20-30) and mAP = 0.533
+*************************************************************************************************************************
+Namespace(batch_size=8, class_path='data/kitti.names', conf_thres=0.001, data_config='config/kitti.data', img_size=416, iou_thres=0.5, model_def='config/yolov3-kitti.cfg', n_cpu=8, nms_thres=0.5, weights_path='weights/yolov3_ckpt_66.pth')
+Compute mAP...
+Average Precisions:
++ Class '0' (Non-Vehicle) - AP: 0.32025785645647115
++ Class '1' (Vehicle) - AP: 0.7477179243234032
+mAP: 0.5339878903899372
+*************************************************************************************************************************
+Generated prediction on trained model on kitti train dataset (7481). Imporoved prediction (eg: images 41,42)
+
+**************************************************************************************************************************
+copy images to path /data/images and labels to /data/kitti_labels
+Label- Transformation >> pathtofile.txt, train.txt, valid.txt, test.txt = (60-15-25)%
+Generate prediction on train set (wrapper.py) >> pseudo_train.txt, pseudo_train_rejected_list.txt
+split data for semi-supervised learning
+Train on 10% of total data using darknet pre_trained weights on imagenet
